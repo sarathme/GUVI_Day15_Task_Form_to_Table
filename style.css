@@ -23,3 +23,8 @@ td,
 th {
   min-width: 150px;
 }
+.table-body {
+  min-height: 10dvh;
+  vertical-align: middle;
+  background-color: #c0c0c0;
+}

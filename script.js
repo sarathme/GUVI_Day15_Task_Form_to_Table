@@ -16,8 +16,6 @@ const tableBtn = document.getElementById("table-btn");
 document.getElementById("toggle-btn").addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target === formBtn) {
-    console.log("clicked");
-    console.log(table);
     table.classList.remove("show");
   }
 

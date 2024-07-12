@@ -14,7 +14,7 @@
     <title>Form to table | Day 15 Task</title>
   </head>
   <body>
-    <div class="container p-3">
+    <div class="container">
       <h1 class="title text-center" id="title">Form to table</h1>
       <p class="desc" id="description"
         >Task is to take input through the form an display it in the table below
@@ -40,143 +40,140 @@
           >Show Table</button
         >
       </div>
-      <div class="container collapse mt-3 show" id="form-cont">
-        <form novalidate id="form">
-          <div class="row mb-3">
-            <div class="col-12 col-sm-7 col-lg-4 mb-3">
-              <label for="fname" class="form-label">First Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="first-name"
-                required />
-              <p class="invalid-feedback" id="foods">Please provide a name</p>
-            </div>
-            <div class="col col-sm-7 col-lg-4 mb-2"
-              ><label for="lname" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="last-name" required />
-              <p class="invalid-feedback" id="foods"
-                >Please provide a last name</p
-              ></div
+    </div>
+    <div class="container collapse mt-3 show mb-3 p-2" id="form-cont">
+      <form novalidate id="form">
+        <div class="row mb-3">
+          <div class="col-12 col-sm-7 col-lg-4 mb-3">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first-name" required />
+            <p class="invalid-feedback" id="foods">Please provide a name</p>
+          </div>
+          <div class="col col-sm-7 col-lg-4 mb-2"
+            ><label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last-name" required />
+            <p class="invalid-feedback" id="foods"
+              >Please provide a last name</p
+            ></div
+          >
+        </div>
+        <div class="row mb-3">
+          <div class="col-12 col-sm-7 col-lg-4 mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+            <p class="invalid-feedback" id="foods"
+              >Please provide a valid email</p
             >
           </div>
-          <div class="row mb-3">
-            <div class="col-12 col-sm-7 col-lg-4 mb-2">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required />
-              <p class="invalid-feedback" id="foods"
-                >Please provide a valid email</p
-              >
-            </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12 col-sm-7 col-lg-4 mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" required />
+            <p class="invalid-feedback">Please provide a state</p>
           </div>
-          <div class="row mb-3">
-            <div class="col-12 col-sm-7 col-lg-4 mb-3">
-              <label for="state" class="form-label">State</label>
-              <input type="text" class="form-control" id="state" required />
-              <p class="invalid-feedback">Please provide a state</p>
-            </div>
-            <div class="col-12 col-sm-7 col-lg-4 mb-3">
-              <label for="country" class="form-label">Country</label>
-              <input type="text" class="form-control" id="country" required />
-              <p class="invalid-feedback">Please provide a country name</p>
-            </div>
-            <div class="col-12 col-sm-7 col-lg-4">
-              <label for="pincode" class="form-label">Pincode</label>
-              <input type="text" class="form-control" id="pincode" required />
-              <p class="invalid-feedback">Please provide a valid pincode</p>
-            </div>
+          <div class="col-12 col-sm-7 col-lg-4 mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" id="country" required />
+            <p class="invalid-feedback">Please provide a country name</p>
           </div>
-          <div class="mb-3 g-0">
-            <p class="form-label">Gender</p>
-            <div class="form-check form-check-inline-sm">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gender"
-                id="male"
-                value="Male" />
-              <label class="form-check-label" for="male"> Male </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gender"
-                id="female"
-                value="Female" />
-              <label class="form-check-label" for="female"> Female </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="gender"
-                id="trans"
-                value="Transgender" />
-              <label class="form-check-label" for="trans"> Trans Gender </label>
-            </div>
-            <p class="invalid-feedback" id="gender-invalid"
-              >Please select a gender</p
-            >
+          <div class="col-12 col-sm-7 col-lg-4">
+            <label for="pincode" class="form-label">Pincode</label>
+            <input type="text" class="form-control" id="pincode" required />
+            <p class="invalid-feedback">Please provide a valid pincode</p>
           </div>
-          <div class="mb-3">
-            <p class="form-label">Pick Your Favourite Foods</p>
-            <div id="emailHelp" class="form-text">Atleast two</div>
-            <!-- <p class="invalid-feedback" id="foods"
+        </div>
+        <div class="mb-3 g-0">
+          <p class="form-label">Gender</p>
+          <div class="form-check form-check-inline-sm">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="male"
+              value="Male" />
+            <label class="form-check-label" for="male"> Male </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="female"
+              value="Female" />
+            <label class="form-check-label" for="female"> Female </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="trans"
+              value="Transgender" />
+            <label class="form-check-label" for="trans"> Trans Gender </label>
+          </div>
+          <p class="invalid-feedback" id="gender-invalid"
+            >Please select a gender</p
+          >
+        </div>
+        <div class="mb-3">
+          <p class="form-label">Pick Your Favourite Foods</p>
+          <div id="emailHelp" class="form-text">Atleast two</div>
+          <!-- <p class="invalid-feedback" id="foods"
             >Please select atleast two of your favourite foods</p
           > -->
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Biriyani"
-                id="biriyani"
-                name="food" />
-              <label class="form-check-label" for="biriyani"> Biriyani </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Noodles"
-                id="Noodles"
-                name="food" />
-              <label class="form-check-label" for="Noodles"> Noodles </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Dosa"
-                id="Dosa"
-                name="food" />
-              <label class="form-check-label" for="Dosa"> Dosa </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Idly"
-                id="Idly"
-                name="food" />
-              <label class="form-check-label" for="Idly"> Idly </label>
-            </div>
-            <p class="invalid-feedback" id="foods-invalid"
-              >Please select atleast two of your favourite foods</p
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Biriyani"
+              id="biriyani"
+              name="food" />
+            <label class="form-check-label" for="biriyani"> Biriyani </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Noodles"
+              id="Noodles"
+              name="food" />
+            <label class="form-check-label" for="Noodles"> Noodles </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Dosa"
+              id="Dosa"
+              name="food" />
+            <label class="form-check-label" for="Dosa"> Dosa </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="Idly"
+              id="Idly"
+              name="food" />
+            <label class="form-check-label" for="Idly"> Idly </label>
+          </div>
+          <p class="invalid-feedback" id="foods-invalid"
+            >Please select atleast two of your favourite foods</p
+          >
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-7 col-lg-4">
+            <button type="submit" id="submit" class="btn btn-primary w-100"
+              >Submit</button
             >
           </div>
-          <div class="row">
-            <div class="col-12 col-sm-7 col-lg-4">
-              <button type="submit" id="submit" class="btn btn-primary w-100"
-                >Submit</button
-              >
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
+
     <div
-      class="container table-responsive-sm table-responsive-md p-2 collapse"
+      class="container table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-responsive-xxl collapse"
       id="table-cont">
       <table
         class="table table-bordered mt-5 text-center table-striped table-warning border-3"
@@ -193,7 +190,13 @@
             <th>Country</th>
           </tr>
         </thead>
-        <tbody id="table-body"> </tbody>
+        <tbody id="table-body">
+          <tr>
+            <td colspan="8"
+              ><p class="text-danger">No Records Available </p></td
+            >
+          </tr>
+        </tbody>
       </table>
     </div>
 

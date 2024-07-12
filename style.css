@@ -16,11 +16,10 @@ table {
   min-height: 20dvh;
 }
 
+.desc {
+  text-align: center;
+}
 td,
 th {
   min-width: 150px;
-}
-
-.bg {
-  background-color: none !important;
 }

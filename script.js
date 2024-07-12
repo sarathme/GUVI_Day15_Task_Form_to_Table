@@ -1,13 +1,30 @@
-const form = document.getElementById("user-form");
+const form = document.getElementById("form");
+const table = document.getElementById("table-cont");
+const formCont = document.getElementById("form-cont");
 
 const foods = document.getElementsByName("food");
 const gender = document.getElementsByName("gender");
-const fname = document.getElementById("fname");
-const lname = document.getElementById("lname");
+const fname = document.getElementById("first-name");
+const lname = document.getElementById("last-name");
 const email = document.getElementById("email");
 const state = document.getElementById("state");
 const country = document.getElementById("country");
 const pincode = document.getElementById("pincode");
+const formBtn = document.getElementById("form-btn");
+const tableBtn = document.getElementById("table-btn");
+
+document.getElementById("toggle-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target === formBtn) {
+    console.log("clicked");
+    console.log(table);
+    table.classList.remove("show");
+  }
+
+  if (e.target === tableBtn) {
+    formCont.classList.remove("show");
+  }
+});
 
 const tableBody = document.getElementById("table-body");
 
@@ -34,7 +51,7 @@ form.addEventListener("submit", (e) => {
   } else if (foodArr.length < 2) {
     document.getElementById("foods-invalid").style.display = "block";
   } else {
-    console.log(fname.value);
+    tableBody.innerHTML = "";
     let obj = {
       firstName: fname.value,
       lastName: lname.value,
@@ -60,7 +77,7 @@ form.addEventListener("submit", (e) => {
         ${el.foods
           .map(
             (el) =>
-              `<li class="list-group-item text-white" style="background-color:transparent; border:none">${el}</li>`
+              `<li class="list-group-item " style="background-color:transparent; border:none">${el}</li>`
           )
           .join("")}
         </ul></td
@@ -69,5 +86,8 @@ form.addEventListener("submit", (e) => {
       <td>${el.country}</td>`;
       tableBody.insertAdjacentHTML("beforeend", tableDataHTML);
     });
+
+    formCont.classList.remove("show");
+    table.classList.add("show");
   }
 });
